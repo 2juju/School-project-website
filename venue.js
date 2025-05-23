@@ -611,6 +611,128 @@ document.addEventListener("DOMContentLoaded", function () {
     venueWrapper.innerHTML = "";
   }
 
+  const venueCategory = {
+    1: {
+      name: "Central Plaza",
+      ratings: {
+        staff: 75,
+        comfort: 78,
+        freeWifi: 80,
+        facilities: 70,
+        valueForMoney: 77,
+        cleanliness: 74,
+        location: 76,
+      },
+    },
+    2: {
+      name: "Pacific Towers Hotel",
+      ratings: {
+        staff: 50,
+        comfort: 53,
+        freeWifi: 55,
+        facilities: 48,
+        valueForMoney: 52,
+        cleanliness: 49,
+        location: 51,
+      },
+    },
+    3: {
+      name: "Sky Center Complex",
+      ratings: {
+        staff: 69,
+        comfort: 72,
+        freeWifi: 71,
+        facilities: 68,
+        valueForMoney: 70,
+        cleanliness: 73,
+        location: 69,
+      },
+    },
+    4: {
+      name: "Sea View Tavern",
+      ratings: {
+        staff: 64,
+        comfort: 67,
+        freeWifi: 66,
+        facilities: 63,
+        valueForMoney: 65,
+        cleanliness: 68,
+        location: 64,
+      },
+    },
+    5: {
+      name: "Ashby Castle",
+      ratings: {
+        staff: 90,
+        comfort: 93,
+        freeWifi: 92,
+        facilities: 89,
+        valueForMoney: 91,
+        cleanliness: 94,
+        location: 90,
+      },
+    },
+    6: {
+      name: "Fawlty Towers",
+      ratings: {
+        staff: 59,
+        comfort: 62,
+        freeWifi: 61,
+        facilities: 58,
+        valueForMoney: 60,
+        cleanliness: 63,
+        location: 59,
+      },
+    },
+    7: {
+      name: "Hilltop Mansion",
+      ratings: {
+        staff: 47,
+        comfort: 50,
+        freeWifi: 49,
+        facilities: 46,
+        valueForMoney: 48,
+        cleanliness: 51,
+        location: 47,
+      },
+    },
+    8: {
+      name: "Haslegrave Hotel",
+      ratings: {
+        staff: 87,
+        comfort: 90,
+        freeWifi: 89,
+        facilities: 86,
+        valueForMoney: 88,
+        cleanliness: 91,
+        location: 87,
+      },
+    },
+    9: {
+      name: "Forest Inn",
+      ratings: {
+        staff: 74,
+        comfort: 77,
+        freeWifi: 76,
+        facilities: 73,
+        valueForMoney: 75,
+        cleanliness: 78,
+        location: 74,
+      },
+    },
+    10: {
+      name: "Southwestern Estate",
+      ratings: {
+        staff: 84,
+        comfort: 87,
+        freeWifi: 86,
+        facilities: 83,
+        valueForMoney: 85,
+        cleanliness: 88,
+        location: 84,
+      },
+    },
+  };
   function createVenueElement(venue) {
     const venueElement = document.createElement("div");
     venueElement.setAttribute("id", venue.venue_id);
@@ -731,7 +853,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="heart-outline absolute top-0 left-0 w-full h-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" class="w-full h-full"><path fill="none" stroke="#E2264D" stroke-width="3" d="M46.145 37.61a168 168 0 0 0 4.744 3.26c6.824-4.81 9.145-4.919 12.832-.662 3.001 3.464 2.177 7.241.658 10.834-1.121 2.65-2.563 5.346-4.494 7.436-7.511 8.134-10.373 8.347-17.575.11-3.695-4.225-7.449-9.129-5.31-15.62 1.4-4.253 4.202-6.449 9.145-5.358z"class="hover:fill-[#E2264D]"/></svg>
       </div>
-      <div class="heart-icon w-full h-full bg-[url('heart.png')] bg-left absolute hidden"></div>
+      <div class="heart-icon w-full h-full bg-[url('assets/heart.png')] bg-left absolute hidden"></div>
   </div>
 
                   </button>
@@ -893,11 +1015,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded" style="width:${
-                                        ratings.staff
+                                        venue.ratings.staff
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${ratings.staff}%</span>
+                                  <span class="text-sm">${
+                                    venue.ratings.staff
+                                  }%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -905,12 +1029,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        ratings.comfort
+                                        venue.ratings.comfort
                                       }%;">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.comfort
+                                    venue.ratings.comfort
                                   }%</span>
                               </dd>
                           </dl>
@@ -919,12 +1043,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        ratings.freeWifi
+                                        venue.ratings.freeWifi
                                       }%;">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.freeWifi
+                                    venue.ratings.freeWifi
                                   }%</span>
                               </dd>
                           </dl>
@@ -933,12 +1057,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        ratings.facilities
+                                        venue.ratings.facilities
                                       }%;">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.facilities
+                                    venue.ratings.facilities
                                   }%</span>
                               </dd>
                           </dl>
@@ -949,12 +1073,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        ratings.valueForMoney
+                                        venue.ratings.valueForMoney
                                       }%;">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.valueForMoney
+                                    venue.ratings.valueForMoney
                                   }%</span>
                               </dd>
                           </dl>
@@ -963,12 +1087,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        ratings.cleanliness
+                                        venue.ratings.cleanliness
                                       }%;">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.cleanliness
+                                    venue.ratings.cleanliness
                                   }%</span>
                               </dd>
                           </dl>
@@ -977,12 +1101,12 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded "style="width:${
-                                        ratings.location
+                                        venue.ratings.location
                                       }%">
                                       </div>
                                   </div>
                                   <span class="text-sm">${
-                                    ratings.location
+                                    venue.ratings.location
                                   }%</span>
                               </dd>
                           </dl>
