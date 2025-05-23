@@ -19,12 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const infoPage = document.getElementById("information-page");
 
   const venueWrapper = document.getElementById("venue-wrapper");
-  const amenitiesCheckbox = document.querySelectorAll('input[name="amenities[]"]');
-  const locationCheckbox = document.querySelectorAll('input[name="location[]"]');
+  const amenitiesCheckbox = document.querySelectorAll(
+    'input[name="amenities[]"]'
+  );
+  const locationCheckbox = document.querySelectorAll(
+    'input[name="location[]"]'
+  );
   let selectedVenueType = "Show all";
   const toastContainer = document.getElementById("toast-container");
   const sortButton = document.getElementById("sort-button");
-  const targetElement = document.getElementById(sortButton.getAttribute("data-target"));
+  const targetElement = document.getElementById(
+    sortButton.getAttribute("data-target")
+  );
   const filterTitle = document.getElementById("venue-main-title");
   const sortDescription = document.getElementById("sort-description");
   sortDescription.classList.add("invisible");
@@ -34,7 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Hotel",
       description:
         "Nestled in the city's heart, our hotel is a shimmering oasis of modern luxury, offering breathtaking city views that will leave you in awe. With fast wifi, a pet-friendly policy, and an inviting bar and restaurant, we ensure every guest enjoys the ultimate comfort and convenience. Imagine exchanging your vows against a backdrop of twinkling city lights, surrounded by your loved ones, and celebrating the start of your new journey in our stylish and elegant venue. Whether you envision an intimate affair or a grand celebration, our hotel provides the perfect setting to make your dream wedding a reality.",
-      amenities: ["fast wifi", "pets allowed", "bar", "restaurant", "non-smoking"],
+      amenities: [
+        "fast wifi",
+        "pets allowed",
+        "bar",
+        "restaurant",
+        "non-smoking",
+      ],
       location: ["shopping area", "city view"],
       photos: [
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/19173453.jpg?k=17288610cfbbc226c6cdb5517a044a0ed333fa418c90a6aade1844bcdbc43004&o=&hp=1",
@@ -48,7 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Hotel",
       description:
         "Discover a seaside paradise at our hotel, where panoramic ocean views and luxurious amenities create an unforgettable wedding experience filled with joy and romance. From our spacious and inviting bridal suites to the relaxing poolside atmosphere, every detail is designed to exceed your expectations and make your special day exceptional. Whether you prefer a beachfront ceremony or a sunset reception on the balcony, our venue promises elegance, charm, and the perfect backdrop to celebrate your love. Embrace the enchanting coastal vibes and let the sound of the waves be the soundtrack to your happily ever after.",
-      amenities: ["free parking", "pool", "fast wifi", "non-smoking", "bridal suite", "balcony"],
+      amenities: [
+        "free parking",
+        "pool",
+        "fast wifi",
+        "non-smoking",
+        "bridal suite",
+        "balcony",
+      ],
       location: ["mountain view", "beach", "ocean view"],
       photos: [
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/538287249.jpg?k=92a4e219116bc5c0afd30a0ed9793e563877d3123c8fe95fd6e6cb80ce67794d&o=&hp=1",
@@ -98,7 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Castle",
       description:
         "Experience the magic and enchantment of a fairytale wedding at our historic castle, surrounded by the beauty of our enchanting gardens and rich history. With amenities like free parking, disabled access, and pet-friendly policies, our venue caters to the needs of every guest, ensuring a seamless and memorable celebration. Picture yourself walking down the aisle amidst the blooming flowers and ancient stone walls, followed by a reception filled with joy, laughter, and elegance. Whether you choose our scenic gardens or the iconic landmark views, our castle promises a timeless and unforgettable backdrop for your love story.",
-      amenities: ["free parking", "disabled parking", "non-smoking", "pets allowed"],
+      amenities: [
+        "free parking",
+        "disabled parking",
+        "non-smoking",
+        "pets allowed",
+      ],
       location: ["garden", "shopping area", "landmark"],
       photos: [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/35/62/aa/ashby-de-la-zouch-castle.jpg?w=1400&h=-1&s=1",
@@ -134,7 +158,14 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Residential",
       description:
         "Escape to our residential venue's serene and rejuvenating embrace of the mountains! Offering panoramic vistas and unparalleled tranquillity, our retreat is a true oasis of peace. Indulge in the refreshing pool, soak in the sun on our spacious balconies, and feel the world's weight melt away. Imagine exchanging heartfelt vows surrounded by majestic peaks and celebrating your love under the twinkling starlit sky. Whether you prefer an outdoor ceremony overlooking the awe-inspiring landscape or a cosy indoor reception, our venue promises a magical mountain wedding experience that will fill your heart with joy and lasting memories.",
-      amenities: ["free parking", "pool", "fast wifi", "non-smoking", "balcony", "pets allowed"],
+      amenities: [
+        "free parking",
+        "pool",
+        "fast wifi",
+        "non-smoking",
+        "balcony",
+        "pets allowed",
+      ],
       location: ["mountain view"],
       photos: [
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/513444988.jpg?k=990a1a97c0ff3b013bbb81a3b360999b28d13b6db783f10bb35e66edfef6abec&o=&hp=1",
@@ -148,7 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Hotel",
       description:
         "Elevate your wedding celebration to new heights at our city hotel, where modern elegance meets panoramic views. Bask in the convenience of free parking and fast Wi-Fi, and indulge in the culinary delights of our gourmet restaurant. Every detail has been crafted with your happiness in mind, from our chic event spaces to stylish accommodations. Whether planning an intimate gathering or a lavish affair, our hotel offers the perfect blend of sophistication and charm, ensuring your special day is unforgettable.",
-      amenities: ["free parking", "fast wifi", "non-smoking", "pets not allowed", "restaurant"],
+      amenities: [
+        "free parking",
+        "fast wifi",
+        "non-smoking",
+        "pets not allowed",
+        "restaurant",
+      ],
       location: ["city view"],
       photos: [
         "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/173571453.jpg?k=89cd8fec4eb75c501b522209933657d7ec72965c7f6ecc40088c870aebf52b1b&o=&s=1024x",
@@ -162,7 +199,14 @@ document.addEventListener("DOMContentLoaded", function () {
       venue_type: "Tavern",
       description:
         "Discover the rustic charm and scenic beauty that await you at our mountain tavern, nestled in a picturesque setting. Cosy interiors, a welcoming bar, and pet-friendly accommodations create a warm and inviting atmosphere, perfect for your wedding festivities. Immerse yourself in the natural splendour surrounding you and let the world's stress melt away. Celebrate your love in this charming and picturesque setting, where the beauty of the mountains and the warmth of the tavern will create a truly unforgettable experience.",
-      amenities: ["free parking", "fast wifi", "non-smoking", "pets allowed", "restaurant", "bar"],
+      amenities: [
+        "free parking",
+        "fast wifi",
+        "non-smoking",
+        "pets allowed",
+        "restaurant",
+        "bar",
+      ],
       location: ["mountain view"],
       photos: [
         "https://lh3.googleusercontent.com/p/AF1QipNOwlB39cGajFZRP28jnHS_FVTAibegxENbEs1i=s1360-w1360-h1020",
@@ -217,12 +261,15 @@ document.addEventListener("DOMContentLoaded", function () {
     menuContent.classList.toggle("hidden");
   });
   window.addEventListener("click", (event) => {
-    if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+    if (
+      !menuButton.contains(event.target) &&
+      !menuContent.contains(event.target)
+    ) {
       menuContent.classList.add("hidden");
     }
   });
 
-  fetch("/dbqueries.php")
+  fetch("venues.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -235,12 +282,12 @@ document.addEventListener("DOMContentLoaded", function () {
           let additionalInfo = additionalData[venue.venue_id];
           if (additionalInfo) {
             venue = { ...venue, ...additionalInfo };
-            // console.log("Venue with additional info:", venue);
           }
-          const locationInfo = await reverseGeocode(venue.latitude, venue.longitude, [
-            "city",
-            "name",
-          ]);
+          const locationInfo = await reverseGeocode(
+            venue.latitude,
+            venue.longitude,
+            ["city", "name"]
+          );
           venue.distance = calculateDistance(
             venue.latitude,
             venue.longitude,
@@ -257,8 +304,8 @@ document.addEventListener("DOMContentLoaded", function () {
       contents.forEach((content) => {
         content.setAttribute("data-loaded", "true");
       });
-      let allLoaded = true;
 
+      let allLoaded = true;
       contents.forEach((content) => {
         if (content.getAttribute("data-loaded") === "false") {
           allLoaded = false;
@@ -271,7 +318,6 @@ document.addEventListener("DOMContentLoaded", function () {
         skeletons.forEach((skeleton) => skeleton.classList.remove("hidden"));
       }
     })
-
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
     });
@@ -423,7 +469,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>`;
           suggestionLink.href = "#";
-          suggestionLink.className = "block p-2 cursor-pointer hover:bg-gray-200";
+          suggestionLink.className =
+            "block p-2 cursor-pointer hover:bg-gray-200";
 
           suggestionItem.appendChild(suggestionLink);
           suggestionItem.className =
@@ -471,7 +518,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!suggestions.contains(event.target) && event.target !== searchInput) {
         suggestions.classList.add("hidden");
       }
-      if (!skeleSuggest.contains(event.target) && event.target !== searchInput) {
+      if (
+        !skeleSuggest.contains(event.target) &&
+        event.target !== searchInput
+      ) {
         skeleSuggest.classList.add("hidden");
       }
     });
@@ -510,7 +560,9 @@ document.addEventListener("DOMContentLoaded", function () {
       venueWrapper.appendChild(venueElement);
       const availableDates = venue.booking_dates || [];
       const allDates = getAllDatesForYear(new Date().getFullYear());
-      const unavailableDates = allDates.filter((date) => !availableDates.includes(date));
+      const unavailableDates = allDates.filter(
+        (date) => !availableDates.includes(date)
+      );
 
       flatpickr(`#datepicker-${venue.venue_id}`, {
         dateFormat: "Y-m-d",
@@ -521,7 +573,10 @@ document.addEventListener("DOMContentLoaded", function () {
     loadStoredData();
     clearWishlistOnly();
     const storedWishlistItems = loadFromLocalStorage("wishlistItems");
-    console.log("Loaded wishlist items from localStorage:", storedWishlistItems);
+    console.log(
+      "Loaded wishlist items from localStorage:",
+      storedWishlistItems
+    );
     storedWishlistItems.forEach((wishlistItem) => {
       if (isItemInWishlist(wishlistItem)) {
         addWishlistItem(wishlistItem);
@@ -533,159 +588,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearButton = document.querySelector("#price-clear"); //
   clearButton.addEventListener("click", clearStoredData);
 
-  document.getElementById("sort-options").addEventListener("change", function (event) {
-    sortType = event.target.value;
-    // event.target.setAttribute("data-active", "true");
-    if (sortType !== "menu-item-8" && sortType !== "menu-item-9") {
-      sortDescription.classList.remove("invisible");
-    } else {
-      sortDescription.classList.add("invisible");
-    }
+  document
+    .getElementById("sort-options")
+    .addEventListener("change", function (event) {
+      sortType = event.target.value;
+      // event.target.setAttribute("data-active", "true");
+      if (sortType !== "menu-item-8" && sortType !== "menu-item-9") {
+        sortDescription.classList.remove("invisible");
+      } else {
+        sortDescription.classList.add("invisible");
+      }
 
-    if (venues && venues.length > 0) {
-      sortVenues(sortType);
-      displayVenues();
-    } else {
-      console.error("No venues to display");
-    }
-  });
+      if (venues && venues.length > 0) {
+        sortVenues(sortType);
+        displayVenues();
+      } else {
+        console.error("No venues to display");
+      }
+    });
 
   function clearVenueWrapper() {
     venueWrapper.innerHTML = "";
   }
 
-  const venueCategory = {
-    1: {
-      name: "Central Plaza",
-      ratings: {
-        staff: 75,
-        comfort: 78,
-        freeWifi: 80,
-        facilities: 70,
-        valueForMoney: 77,
-        cleanliness: 74,
-        location: 76,
-      },
-    },
-    2: {
-      name: "Pacific Towers Hotel",
-      ratings: {
-        staff: 50,
-        comfort: 53,
-        freeWifi: 55,
-        facilities: 48,
-        valueForMoney: 52,
-        cleanliness: 49,
-        location: 51,
-      },
-    },
-    3: {
-      name: "Sky Center Complex",
-      ratings: {
-        staff: 69,
-        comfort: 72,
-        freeWifi: 71,
-        facilities: 68,
-        valueForMoney: 70,
-        cleanliness: 73,
-        location: 69,
-      },
-    },
-    4: {
-      name: "Sea View Tavern",
-      ratings: {
-        staff: 64,
-        comfort: 67,
-        freeWifi: 66,
-        facilities: 63,
-        valueForMoney: 65,
-        cleanliness: 68,
-        location: 64,
-      },
-    },
-    5: {
-      name: "Ashby Castle",
-      ratings: {
-        staff: 90,
-        comfort: 93,
-        freeWifi: 92,
-        facilities: 89,
-        valueForMoney: 91,
-        cleanliness: 94,
-        location: 90,
-      },
-    },
-    6: {
-      name: "Fawlty Towers",
-      ratings: {
-        staff: 59,
-        comfort: 62,
-        freeWifi: 61,
-        facilities: 58,
-        valueForMoney: 60,
-        cleanliness: 63,
-        location: 59,
-      },
-    },
-    7: {
-      name: "Hilltop Mansion",
-      ratings: {
-        staff: 47,
-        comfort: 50,
-        freeWifi: 49,
-        facilities: 46,
-        valueForMoney: 48,
-        cleanliness: 51,
-        location: 47,
-      },
-    },
-    8: {
-      name: "Haslegrave Hotel",
-      ratings: {
-        staff: 87,
-        comfort: 90,
-        freeWifi: 89,
-        facilities: 86,
-        valueForMoney: 88,
-        cleanliness: 91,
-        location: 87,
-      },
-    },
-    9: {
-      name: "Forest Inn",
-      ratings: {
-        staff: 74,
-        comfort: 77,
-        freeWifi: 76,
-        facilities: 73,
-        valueForMoney: 75,
-        cleanliness: 78,
-        location: 74,
-      },
-    },
-    10: {
-      name: "Southwestern Estate",
-      ratings: {
-        staff: 84,
-        comfort: 87,
-        freeWifi: 86,
-        facilities: 83,
-        valueForMoney: 85,
-        cleanliness: 88,
-        location: 84,
-      },
-    },
-  };
   function createVenueElement(venue) {
     const venueElement = document.createElement("div");
     venueElement.setAttribute("id", venue.venue_id);
     venueElement.classList.add("venue");
     let amenitiesHTML = "";
     let locationHTML = "";
-    const catergory = venueCategory[venue.venue_id];
+    // const catergory = venueCategory[venue.venue_id];
 
     venueElement.dataset.venueAmenities = (
-      Array.isArray(venue.amenities) ? [...venue.amenities, venue.licensed] : [venue.licensed]
+      Array.isArray(venue.amenities)
+        ? [...venue.amenities, venue.licensed]
+        : [venue.licensed]
     ).join(", ");
 
     const amenities = venue.amenities;
@@ -707,12 +644,26 @@ document.addEventListener("DOMContentLoaded", function () {
     venueElement.dataset.venueType = type;
 
     venueThumbnail =
-      Array.isArray(venue.photos) && venue.photos.length > 0 ? venue.photos[0] : undefined;
+      Array.isArray(venue.photos) && venue.photos.length > 0
+        ? venue.photos[0]
+        : undefined;
     gallery0 = venueThumbnail; // Since gallery0 is the same as venueThumbnail
-    gallery1 = Array.isArray(venue.photos) && venue.photos.length > 1 ? venue.photos[1] : undefined;
-    gallery2 = Array.isArray(venue.photos) && venue.photos.length > 2 ? venue.photos[2] : undefined;
-    gallery3 = Array.isArray(venue.photos) && venue.photos.length > 3 ? venue.photos[3] : undefined;
-    gallery4 = Array.isArray(venue.photos) && venue.photos.length > 4 ? venue.photos[4] : undefined;
+    gallery1 =
+      Array.isArray(venue.photos) && venue.photos.length > 1
+        ? venue.photos[1]
+        : undefined;
+    gallery2 =
+      Array.isArray(venue.photos) && venue.photos.length > 2
+        ? venue.photos[2]
+        : undefined;
+    gallery3 =
+      Array.isArray(venue.photos) && venue.photos.length > 3
+        ? venue.photos[3]
+        : undefined;
+    gallery4 =
+      Array.isArray(venue.photos) && venue.photos.length > 4
+        ? venue.photos[4]
+        : undefined;
 
     function createIcon(icon, statusMessage, hidden = false) {
       const hiddenClass = hidden ? "hidden" : "";
@@ -866,7 +817,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3 class="pb-2 text-xl hover:text-wedding-sage font-bold">${
               venue.venue_name
             } - Location</h3>
-            <div id="map-${venue.venue_id}" class="" style="height: 400px;" ></div>
+            <div id="map-${
+              venue.venue_id
+            }" class="" style="height: 400px;" ></div>
         </div>
 
              <div id="content-photos" class="hidden h-full tab-content">
@@ -940,11 +893,11 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded" style="width:${
-                                        catergory.ratings.staff
+                                        ratings.staff
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.staff}%</span>
+                                  <span class="text-sm">${ratings.staff}%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -952,11 +905,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        catergory.ratings.comfort
+                                        ratings.comfort
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.comfort}%</span>
+                                  <span class="text-sm">${
+                                    ratings.comfort
+                                  }%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -964,11 +919,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        catergory.ratings.freeWifi
+                                        ratings.freeWifi
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.freeWifi}%</span>
+                                  <span class="text-sm">${
+                                    ratings.freeWifi
+                                  }%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -976,11 +933,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        catergory.ratings.facilities
+                                        ratings.facilities
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.facilities}%</span>
+                                  <span class="text-sm">${
+                                    ratings.facilities
+                                  }%</span>
                               </dd>
                           </dl>
                       </div>
@@ -990,11 +949,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        catergory.ratings.valueForMoney
+                                        ratings.valueForMoney
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.valueForMoney}%</span>
+                                  <span class="text-sm">${
+                                    ratings.valueForMoney
+                                  }%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -1002,11 +963,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center mb-3">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded " style="width:${
-                                        catergory.ratings.cleanliness
+                                        ratings.cleanliness
                                       }%;">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.cleanliness}%</span>
+                                  <span class="text-sm">${
+                                    ratings.cleanliness
+                                  }%</span>
                               </dd>
                           </dl>
                           <dl>
@@ -1014,11 +977,13 @@ document.addEventListener("DOMContentLoaded", function () {
                               <dd class="flex items-center">
                                   <div class="w-full bg-gray-200 rounded h-2.5  me-2">
                                       <div class="bg-wedding-sage h-2.5 rounded "style="width:${
-                                        catergory.ratings.location
+                                        ratings.location
                                       }%">
                                       </div>
                                   </div>
-                                  <span class="text-sm">${catergory.ratings.location}%</span>
+                                  <span class="text-sm">${
+                                    ratings.location
+                                  }%</span>
                               </dd>
                           </dl>
                       </div>
@@ -1038,9 +1003,9 @@ document.addEventListener("DOMContentLoaded", function () {
       venue.grade_3_cost_per_person
     }"data-grade-4-cost-per-person="${
       venue.grade_4_cost_per_person
-    }"data-grade-5-cost-per-person="${venue.grade_5_cost_per_person}" id="myForm" data-venue-id="${
-      venue.venue_id
-    }"  novalidate>
+    }"data-grade-5-cost-per-person="${
+      venue.grade_5_cost_per_person
+    }" id="myForm" data-venue-id="${venue.venue_id}"  novalidate>
                   <div class="grid grid-cols-2 h-full justify-between w-full">
                  
                       <div id="date-selection" class="inline">
@@ -1052,7 +1017,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                           <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                       </svg>
                                   </div>
-                                  <input id="datepicker-${venue.venue_id}" name="date${
+                                  <input id="datepicker-${
+                                    venue.venue_id
+                                  }" name="date${
       venue.venue_id
     }" class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-2 focus:ring-wedding-churin focus:border-none block w-full ps-10 p-2.5" placeholder="Select date" required />
                                   
@@ -1184,7 +1151,9 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
   </div>`;
 
-    venueElement.querySelector("#wishlistButton").addEventListener("click", handleWishlistClick);
+    venueElement
+      .querySelector("#wishlistButton")
+      .addEventListener("click", handleWishlistClick);
 
     const form = venueElement.querySelector("#myForm");
 
@@ -1194,7 +1163,11 @@ document.addEventListener("DOMContentLoaded", function () {
     datepicker.addEventListener("change", function () {
       if (!datepicker.value) {
         dateInvalid.classList.remove("hidden");
-        datepicker.classList.add("border-rose-600", "text-rose-600", "placeholder:text-rose-600");
+        datepicker.classList.add(
+          "border-rose-600",
+          "text-rose-600",
+          "placeholder:text-rose-600"
+        );
       } else {
         dateInvalid.classList.add("hidden");
         datepicker.classList.remove(
@@ -1242,7 +1215,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     function validateGuestInput() {
       let currentValue = parseInt(guestInput.value, 10);
-      if (isNaN(currentValue) || currentValue < minValue || currentValue > maxValue) {
+      if (
+        isNaN(currentValue) ||
+        currentValue < minValue ||
+        currentValue > maxValue
+      ) {
         guestInput.classList.add("border-rose-600", "text-rose-600");
         guestInvalid.classList.remove("hidden");
         helperText.classList.add("hidden");
@@ -1261,7 +1238,10 @@ document.addEventListener("DOMContentLoaded", function () {
       radio.addEventListener("change", function () {
         if (!radio.checked) {
           gradeInvalid.classList.remove("invisible");
-          gradeStyler.classList.remove("[&_label]:bg-white", "[&_label]:border-gray-100");
+          gradeStyler.classList.remove(
+            "[&_label]:bg-white",
+            "[&_label]:border-gray-100"
+          );
           gradeStyler.classList.add(
             "[&_label]:border-rose-600",
             "text-rose-600",
@@ -1269,7 +1249,10 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         } else {
           gradeInvalid.classList.add("invisible");
-          gradeStyler.classList.add("[&_label]:bg-white", "[&_label]:border-gray-100");
+          gradeStyler.classList.add(
+            "[&_label]:bg-white",
+            "[&_label]:border-gray-100"
+          );
           gradeStyler.classList.remove(
             "[&_label]:border-rose-600",
             "text-rose-600",
@@ -1284,7 +1267,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let isValid = true;
       if (!datepicker.value) {
         dateInvalid.classList.remove("hidden");
-        datepicker.classList.add("border-rose-600", "text-rose-600", "placeholder:text-rose-600");
+        datepicker.classList.add(
+          "border-rose-600",
+          "text-rose-600",
+          "placeholder:text-rose-600"
+        );
         //   event.preventDefault();
         isValid = false;
       }
@@ -1316,7 +1303,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       if (!gradeSelected) {
         gradeInvalid.classList.remove("invisible");
-        gradeStyler.classList.remove("[&_label]:bg-white", "[&_label]:border-gray-100");
+        gradeStyler.classList.remove(
+          "[&_label]:bg-white",
+          "[&_label]:border-gray-100"
+        );
         gradeStyler.classList.add(
           "[&_label]:border-rose-600",
           "text-rose-600",
@@ -1358,13 +1348,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         dropdown.classList.toggle("border", isDropdownOpen);
         dropdown.classList.toggle("border-gray-200", isDropdownOpen);
-        updateIndicator(venueElement.querySelector(`.tab-btn[data-tab="${tab}"]`));
+        updateIndicator(
+          venueElement.querySelector(`.tab-btn[data-tab="${tab}"]`)
+        );
         updateIcons();
       }
     });
 
     function updateIcons() {
-      const buttons = venueElement.querySelectorAll(".accordion-button, .tab-btn");
+      const buttons = venueElement.querySelectorAll(
+        ".accordion-button, .tab-btn"
+      );
       buttons.forEach((button) => {
         const tab = button.dataset.tab;
         const icon = button.querySelector(".accordion-button-icon");
@@ -1439,7 +1433,10 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       const venueMap = venueElement.querySelector(`#map-${venue.venue_id}`);
       if (venueMap) {
-        map = L.map(`map-${venue.venue_id}`).setView([venue.latitude, venue.longitude], 20);
+        map = L.map(`map-${venue.venue_id}`).setView(
+          [venue.latitude, venue.longitude],
+          20
+        );
         map.invalidateSize();
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution:
@@ -1465,9 +1462,9 @@ document.addEventListener("DOMContentLoaded", function () {
           `#locationAccordionText-${venue.venue_id}`
         );
         if (locationAccordion) {
-          locationAccordion.innerHTML = `${venue.locationInfo.city}, ${venue.distance.toFixed(
-            2
-          )} miles to city center`;
+          locationAccordion.innerHTML = `${
+            venue.locationInfo.city
+          }, ${venue.distance.toFixed(2)} miles to city center`;
         } else {
           showAlert(`Map for ${venue.venue_name} not found.`, "[#f27a8a]");
           console.error(
@@ -1524,7 +1521,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const carousels = venueElement.querySelector('[data-carousel="slide"]');
     const track = carousels.querySelector(".carousel-track");
-    const items = Array.from(carousels.querySelectorAll("[data-carousel-item]"));
+    const items = Array.from(
+      carousels.querySelectorAll("[data-carousel-item]")
+    );
     const prevButton = carousels.querySelector("[data-carousel-prev]");
     const nextButton = carousels.querySelector("[data-carousel-next]");
     const pagination = carousels.querySelector(".carousel-pagination");
@@ -1655,7 +1654,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, interval);
   }
-  function handleFormSubmit(form, venue, selectedGrade, datepicker, guestInput) {
+  function handleFormSubmit(
+    form,
+    venue,
+    selectedGrade,
+    datepicker,
+    guestInput
+  ) {
     const formData = new FormData(form);
     const formObject = {};
 
@@ -1696,7 +1701,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     formsArray.push(formObject);
     localStorage.setItem("forms", JSON.stringify(formsArray));
-    showAlert(`Price enquiry for ${formObject.venue_name} successfully submitted.`, "[#9f7cbf]");
+    showAlert(
+      `Price enquiry for ${formObject.venue_name} successfully submitted.`,
+      "[#9f7cbf]"
+    );
     console.log("Form data stored:", formsArray);
     loadStoredData(venue);
   }
@@ -1727,12 +1735,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     <i class="ph ph-x hover:text-wedding-sage"></i>
                 </button>
                 `;
-        formContainer.querySelector(".remove-button").addEventListener("click", function () {
-          formContainer.remove();
-          formsArray.splice(formsArray.indexOf(formObject), 1);
-          updateLocalStorage("forms", formsArray);
-          showAlert(`Removed price enquiry for ${formObject.venue_name}.`, "[#a8cde8]");
-        });
+        formContainer
+          .querySelector(".remove-button")
+          .addEventListener("click", function () {
+            formContainer.remove();
+            formsArray.splice(formsArray.indexOf(formObject), 1);
+            updateLocalStorage("forms", formsArray);
+            showAlert(
+              `Removed price enquiry for ${formObject.venue_name}.`,
+              "[#a8cde8]"
+            );
+          });
 
         // const wrapper = document.getElementById("price-wrapper");
         wrapper.appendChild(formContainer);
@@ -1787,7 +1800,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       addWishlistItem(wishlistItem);
       // updateWishlistIcon(wishlistItem, true);
-      showAlert(`Successfully added ${wishlistItem.venue_name} to wishlist.`, "[#9f7cbf]");
+      showAlert(
+        `Successfully added ${wishlistItem.venue_name} to wishlist.`,
+        "[#9f7cbf]"
+      );
     }
   }
 
@@ -1813,7 +1829,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function isItemInWishlist(wishlistItem) {
     const wishlistItems = loadFromLocalStorage("wishlistItems");
-    return wishlistItems.some((item) => item.venue_id === wishlistItem.venue_id);
+    return wishlistItems.some(
+      (item) => item.venue_id === wishlistItem.venue_id
+    );
     // return false;
   }
 
@@ -1844,10 +1862,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function removeFromWishlist(wishlistItem) {
-    const wishlistElement = document.getElementById(`wl-item-${wishlistItem.venue_id}`);
+    const wishlistElement = document.getElementById(
+      `wl-item-${wishlistItem.venue_id}`
+    );
     if (wishlistElement) {
       wishlistElement.remove();
-      showAlert(`Removed ${wishlistItem.venue_name} from wishlist.`, "[#da8ca3]");
+      showAlert(
+        `Removed ${wishlistItem.venue_name} from wishlist.`,
+        "[#da8ca3]"
+      );
       console.log("Removed from wishlist:", wishlistItem);
       saveWishlistToLocalStorage(wishlistItem, false);
       updateWishlistIcon(wishlistItem, false);
@@ -1857,13 +1880,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function saveWishlistToLocalStorage(wishlistItem, add = true) {
     let wishlistItems = loadFromLocalStorage("wishlistItems");
     if (add) {
-      const existingItem = wishlistItems.find((item) => item.venue_id === wishlistItem.venue_id);
+      const existingItem = wishlistItems.find(
+        (item) => item.venue_id === wishlistItem.venue_id
+      );
       if (!existingItem) {
         wishlistItems.push(wishlistItem);
       }
       updateWishlistIcon(wishlistItem, true);
     } else {
-      wishlistItems = wishlistItems.filter((item) => item.venue_id !== wishlistItem.venue_id);
+      wishlistItems = wishlistItems.filter(
+        (item) => item.venue_id !== wishlistItem.venue_id
+      );
     }
     updateLocalStorage("wishlistItems", wishlistItems);
   }
@@ -1905,7 +1932,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (data.address) {
         if (types.includes("city")) {
           locationInfo.city =
-            data.address.city || data.address.town || data.address.village || "Unknown city";
+            data.address.city ||
+            data.address.town ||
+            data.address.village ||
+            "Unknown city";
         }
         if (types.includes("name")) {
           locationInfo.name = data.display_name || "Unknown location";
@@ -1959,11 +1989,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const amenityMatch =
         checkedAmenities.length === 0 ||
-        checkedAmenities.every((amenities) => venueAmenities.includes(amenities));
+        checkedAmenities.every((amenities) =>
+          venueAmenities.includes(amenities)
+        );
       const locationMatch =
         checkedLocation.length === 0 ||
         checkedLocation.every((location) => venueLocation.includes(location));
-      const typeMatch = selectedVenueType === "Show all" || venueType === selectedVenueType;
+      const typeMatch =
+        selectedVenueType === "Show all" || venueType === selectedVenueType;
 
       const showVenue = amenityMatch && locationMatch && typeMatch;
 
@@ -1992,7 +2025,10 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active", "text-black");
       if (selectedVenueType === "Show all") {
         filterTitle.textContent = `All Venues`;
-      } else if (selectedVenueType === "Hotel" || selectedVenueType === "Castle") {
+      } else if (
+        selectedVenueType === "Hotel" ||
+        selectedVenueType === "Castle"
+      ) {
         filterTitle.textContent = `All Venues - ${selectedVenueType}s`;
       } else {
         filterTitle.textContent = `All Venues - ${selectedVenueType}`;
@@ -2005,7 +2041,10 @@ document.addEventListener("DOMContentLoaded", function () {
     targetElement.classList.toggle("hidden");
   });
   window.addEventListener("click", function (event) {
-    if (!sortButton.contains(event.target) && !targetElement.contains(event.target)) {
+    if (
+      !sortButton.contains(event.target) &&
+      !targetElement.contains(event.target)
+    ) {
       targetElement.classList.add("hidden");
     }
   });
@@ -2014,9 +2053,15 @@ document.addEventListener("DOMContentLoaded", function () {
   collapse.forEach((collapse) => {
     collapse.addEventListener("click", function () {
       const target = this.getAttribute("data-target");
-      const targetContentHidden = document.getElementById(target).classList.toggle("hidden");
-      collapse.querySelector(".plus").classList.toggle("hidden", !targetContentHidden);
-      collapse.querySelector(".minus").classList.toggle("hidden", targetContentHidden);
+      const targetContentHidden = document
+        .getElementById(target)
+        .classList.toggle("hidden");
+      collapse
+        .querySelector(".plus")
+        .classList.toggle("hidden", !targetContentHidden);
+      collapse
+        .querySelector(".minus")
+        .classList.toggle("hidden", targetContentHidden);
     });
   });
 
@@ -2081,14 +2126,19 @@ document.addEventListener("DOMContentLoaded", function () {
       home.style.display = "none";
       resultPage.style.display = "none";
     } else {
-      const matchingSuggestion = venues.find((venue) => venue.venue_id === fragmentIdentifier);
+      const matchingSuggestion = venues.find(
+        (venue) => venue.venue_id === fragmentIdentifier
+      );
       if (matchingSuggestion) {
         resultPage.style.display = "block";
         home.style.display = "none";
         const suggestionElement = document.getElementById(fragmentIdentifier);
         if (suggestionElement) {
           const yOffset = -200;
-          const y = suggestionElement.getBoundingClientRect().top + window.scrollY + yOffset;
+          const y =
+            suggestionElement.getBoundingClientRect().top +
+            window.scrollY +
+            yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }
